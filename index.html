@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <input type="password" name="pass-box" id="pass-box">
+            <button onclick="change_input_type()" id="btn">Show Password</button>
+        </div>
+    </section>
+</body>
+<script>
+    function change_input_type() {
+        let input_element = document.getElementById("pass-box");
+        let button = document.getElementById("btn");
+        if (input_element.type === "password") {
+            input_element.type = "text";
+            button.innerText = "Hide Password";
+        } else {
+            input_element.type = "password";
+            button.innerHTML = "Show Password";
+        }
+    }
+</script>
+</html>
